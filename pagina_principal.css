@@ -554,7 +554,7 @@ body {
 
 
 /* RESPONSIVO MÓVIL Y TABLETA */
-@media (max-width: 900px) {
+@media (max-width: 950px) {
     .contenedor-servicios-grid {
         grid-template-columns: repeat(2, 1fr);
     }
