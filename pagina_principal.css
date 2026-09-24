@@ -553,193 +553,18 @@ body {
 
 
 
-/* =========================
-   CELULARES
-========================= */
-
-@media (max-width: 650px) {
-
-    html,
-    body {
-        width: 100%;
-        max-width: 100%;
-        overflow-x: hidden;
+/* RESPONSIVO MÓVIL Y TABLETA */
+@media (max-width: 900px) {
+    .contenedor-servicios-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
-
-    /* MENÚ */
-
-    #menu {
-        height: 60px;
-        width: 100%;
+    .card-destacada, .card-destacada-final, .card-horizontal {
+        grid-column: span 2;
     }
-
-    #menu ul {
-        width: 100%;
-        gap: 0;
-        justify-content: center;
+    .card-vertical {
+        grid-column: span 1;
+        grid-row: span 1;
     }
-
-    #menu a {
-        padding: 22px 6px;
-        font-size: 9px;
-    }
-
-
-    /* SLIDER */
-
-    .slider-container {
-        width: 100%;
-        max-width: 100%;
-        height: 100vh;
-    }
-
-    .pantalla {
-        width: 100%;
-        min-width: 100%;
-        max-width: 100%;
-        flex: 0 0 100%;
-        min-height: 100vh;
-        padding: 90px 20px 60px;
-        box-sizing: border-box;
-    }
-
-
-    /* CONTENIDO */
-
-    .contenido-seccion {
-        width: 100%;
-        max-width: 100%;
-        gap: 25px;
-    }
-
-    #texto {
-        width: 100%;
-        max-width: 100%;
-        text-align: center;
-    }
-
-    #texto h1,
-    #texto h2 {
-        width: 100%;
-        max-width: 100%;
-        font-size: 34px;
-        line-height: 1.1;
-        letter-spacing: 1px;
-        margin-bottom: 18px;
-    }
-
-    #texto p {
-        width: 100%;
-        max-width: 100%;
-        font-size: 13px;
-        line-height: 1.6;
-    }
-
-
-    /* TARJETAS */
-
-    .contenedor-tarjetas {
-        width: 100%;
-        max-width: 100%;
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 10px;
-    }
-
-    .contenedor-tarjetas a {
-        min-width: 0;
-    }
-
-    .tarjeta-info {
-        width: 100%;
-        height: 190px;
-        padding: 10px;
-        box-sizing: border-box;
-    }
-
-    .tarjeta-info img {
-        width: 100%;
-        height: 70px;
-        margin-bottom: 8px;
-    }
-
-    .tarjeta-info h3 {
-        font-size: 10px;
-        letter-spacing: 1px;
-        margin-bottom: 7px;
-    }
-
-    .tarjeta-info p {
-        font-size: 10px;
-        line-height: 1.4;
-    }
-
-
-    /* BOTONES DEL SLIDER */
-
-    .slider-anterior,
-    .slider-siguiente {
-        width: 35px;
-        height: 35px;
-        font-size: 20px;
-    }
-
-    .slider-anterior {
-        left: 5px;
-    }
-
-    .slider-siguiente {
-        right: 5px;
-    }
-
-
-    /* SECCIONES DE ABAJO */
-
-    .seccion-abajo {
-        width: 100%;
-        min-height: auto;
-        padding: 80px 20px;
-        box-sizing: border-box;
-    }
-
-    .contenido-abajo {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .contenido-abajo h2 {
-        font-size: 30px;
-        line-height: 1.2;
-        letter-spacing: 1px;
-        margin-bottom: 30px;
-    }
-
-
-    /* CAJAS */
-
-    .contenedor-cajas-nuevas,
-    .fila-3,
-    .fila-2,
-    .fila-1,
-    .fila-asimetrica-1,
-    .fila-cuatro,
-    .fila-asimetrica-2 {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        gap: 15px;
-    }
-
-    .caja-opaca {
-        width: 100%;
-        box-sizing: border-box;
-        padding: 20px;
-    }
-
-    .caja-mini {
-        width: 100%;
-    }
-
 }
 
 
@@ -748,155 +573,59 @@ body {
 
 
 
+@media (max-width: 700px) {
 
+nav {
+    flex-direction: column;
+    gap: 20px;
+}
 
-@media (max-width: 650px) {
+nav h2 {
+    text-align: center;
+}
 
-    html,
-    body {
-        width: 100%;
-        max-width: 100%;
-        overflow-x: hidden;
+nav a {
+    margin: 0 8px;
+    font-size: 14px;
+}
+
+.inicio {
+    text-align: center;
+    align-items: center;
+}
+
+.inicio h1 {
+    font-size: 48px;
+}
+
+.inicio p {
+    font-size: 16px;
+}
+
+section {
+    padding: 60px 0;
+}
+
+section h2 {
+    font-size: 32px;
+}
+
+.tarjetas,
+.pasos,
+.lista,
+.ejemplos-contenedor {
+    grid-template-columns: 1fr;
+}
+
+}
+
+@media (max-width: 600px) {
+    .contenedor-servicios-grid {
+        grid-template-columns: 1fr;
     }
-
-    /* MENU */
-
-    .menu {
-        width: 100%;
-        height: auto;
-        min-height: 60px;
-        padding: 10px 5px;
-        overflow-x: auto;
-        white-space: nowrap;
-    }
-
-    .menu a {
-        font-size: 15px;
-        padding: 8px 10px;
-    }
-
-    /* SLIDER */
-
-    .slider-container {
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-        overflow: hidden;
-    }
-
-    .pantalla {
-        width: 100%;
-        min-width: 100%;
-        max-width: 100%;
-        flex: 0 0 100%;
-        min-height: 100vh;
-        height: auto;
-        box-sizing: border-box;
-
-        padding: 90px 20px 60px;
-    }
-
-    .contenido-seccion {
-        width: 100%;
-        max-width: 100%;
-        box-sizing: border-box;
-    }
-
-    /* TITULO */
-
-    #titulo {
-        width: 100%;
-        max-width: 100%;
-        font-size: 34px;
-        line-height: 1.15;
-        text-align: center;
-        word-wrap: break-word;
-    }
-
-    /* TEXTO */
-
-    #texto {
-        width: 100%;
-        max-width: 100%;
-        font-size: 18px;
-        line-height: 1.45;
-        text-align: center;
-        box-sizing: border-box;
-    }
-
-    /* TARJETAS */
-
-    .contenedor-tarjetas {
-        width: 100%;
-        max-width: 100%;
-
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-
-        gap: 12px;
-        box-sizing: border-box;
-    }
-
-    .tarjeta {
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-        min-height: 210px;
-        box-sizing: border-box;
-        padding: 15px 8px;
-    }
-
-    .tarjeta img {
-        width: 70px;
-        height: 100px;
-        object-fit: cover;
-    }
-
-    .tarjeta h3 {
-        font-size: 18px;
-        line-height: 1.2;
-        word-wrap: break-word;
-    }
-
-    .tarjeta p {
-        font-size: 14px;
-        line-height: 1.3;
-    }
-
-    /* BOTONES DEL SLIDER */
-
-    .boton-slider {
-        width: 38px;
-        height: 55px;
-        font-size: 25px;
-    }
-
-    /* SECCIONES DE ABAJO */
-
-    .seccion-abajo {
-        width: 100%;
-        max-width: 100%;
-        box-sizing: border-box;
-        padding: 70px 20px;
-    }
-
-    .contenido-abajo {
-        width: 100%;
-        max-width: 100%;
-        box-sizing: border-box;
-    }
-
-    .cajas {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .caja {
-        width: 100%;
-        max-width: 100%;
-        box-sizing: border-box;
+    .card-destacada, .card-destacada-final, .card-horizontal, .card-vertical {
+        grid-column: span 1;
+        grid-row: span 1;
     }
 }
 
