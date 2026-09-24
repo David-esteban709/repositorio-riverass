@@ -553,103 +553,254 @@ body {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* =========================
+   CELULARES
+========================= */
 
 @media (max-width: 650px) {
 
-html,
-body {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* MENÚ */
+
+    #menu {
+        height: 60px;
+        width: 100%;
+    }
+
+    #menu ul {
+        width: 100%;
+        gap: 0;
+        justify-content: center;
+    }
+
+    #menu a {
+        padding: 22px 6px;
+        font-size: 9px;
+    }
+
+
+    /* SLIDER */
+
+    .slider-container {
+        width: 100%;
+        max-width: 100%;
+        height: 100vh;
+    }
+
+    .pantalla {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        flex: 0 0 100%;
+        min-height: 100vh;
+        padding: 90px 20px 60px;
+        box-sizing: border-box;
+    }
+
+
+    /* CONTENIDO */
+
+    .contenido-seccion {
+        width: 100%;
+        max-width: 100%;
+        gap: 25px;
+    }
+
+    #texto {
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    #texto h1,
+    #texto h2 {
+        width: 100%;
+        max-width: 100%;
+        font-size: 34px;
+        line-height: 1.1;
+        letter-spacing: 1px;
+        margin-bottom: 18px;
+    }
+
+    #texto p {
+        width: 100%;
+        max-width: 100%;
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+
+    /* TARJETAS */
+
+    .contenedor-tarjetas {
+        width: 100%;
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .contenedor-tarjetas a {
+        min-width: 0;
+    }
+
+    .tarjeta-info {
+        width: 100%;
+        height: 190px;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .tarjeta-info img {
+        width: 100%;
+        height: 70px;
+        margin-bottom: 8px;
+    }
+
+    .tarjeta-info h3 {
+        font-size: 10px;
+        letter-spacing: 1px;
+        margin-bottom: 7px;
+    }
+
+    .tarjeta-info p {
+        font-size: 10px;
+        line-height: 1.4;
+    }
+
+
+    /* BOTONES DEL SLIDER */
+
+    .slider-anterior,
+    .slider-siguiente {
+        width: 35px;
+        height: 35px;
+        font-size: 20px;
+    }
+
+    .slider-anterior {
+        left: 5px;
+    }
+
+    .slider-siguiente {
+        right: 5px;
+    }
+
+
+    /* SECCIONES DE ABAJO */
+
+    .seccion-abajo {
+        width: 100%;
+        min-height: auto;
+        padding: 80px 20px;
+        box-sizing: border-box;
+    }
+
+    .contenido-abajo {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .contenido-abajo h2 {
+        font-size: 30px;
+        line-height: 1.2;
+        letter-spacing: 1px;
+        margin-bottom: 30px;
+    }
+
+
+    /* CAJAS */
+
+    .contenedor-cajas-nuevas,
+    .fila-3,
+    .fila-2,
+    .fila-1,
+    .fila-asimetrica-1,
+    .fila-cuatro,
+    .fila-asimetrica-2 {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+    }
+
+    .caja-opaca {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 20px;
+    }
+
+    .caja-mini {
+        width: 100%;
+    }
+
 }
 
-.pantalla {
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
-    margin: 0 !important;
-    padding: 100px 7% 60px !important;
-    box-sizing: border-box;
-}
 
-#texto {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 auto;
-    box-sizing: border-box;
-}
-
-#texto h1,
-#texto h2 {
-    width: 100%;
-    font-size: 36px;
-    line-height: 1.1;
-    box-sizing: border-box;
-}
-
-#texto p {
-    width: 100%;
-    max-width: 100%;
-    font-size: 14px;
-    line-height: 1.6;
-    box-sizing: border-box;
-}
-
-.contenedor-tarjetas {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 auto;
-    box-sizing: border-box;
-}
-
-.tarjeta-info {
-    box-sizing: border-box;
-    min-width: 0;
-}
-
-.contenedor-cajas-nuevas {
-    width: 100% !important;
-    max-width: 100% !important;
-    box-sizing: border-box;
-}
-
-}
+/* =========================
+   CELULARES PEQUEÑOS
+========================= */
 
 @media (max-width: 400px) {
 
-.pantalla {
-    width: 100% !important;
-    padding: 95px 6% 50px !important;
+    #menu a {
+        padding: 22px 4px;
+        font-size: 8px;
+    }
+
+    .pantalla {
+        padding: 90px 15px 50px;
+    }
+
+    #texto h1,
+    #texto h2 {
+        font-size: 29px;
+    }
+
+    #texto p {
+        font-size: 12px;
+    }
+
+    .contenedor-tarjetas {
+        gap: 8px;
+    }
+
+    .tarjeta-info {
+        height: 180px;
+        padding: 8px;
+    }
+
+    .tarjeta-info img {
+        height: 60px;
+    }
+
+    .tarjeta-info h3 {
+        font-size: 9px;
+    }
+
+    .tarjeta-info p {
+        font-size: 9px;
+    }
+
 }
 
-#texto h1,
-#texto h2 {
-    font-size: 31px;
-}
 
-#texto p {
-    font-size: 13px;
-}
 
-.contenedor-tarjetas {
-    width: 100% !important;
-}
 
-}
+
+
+
+
+
+
+
+
+
+
+
