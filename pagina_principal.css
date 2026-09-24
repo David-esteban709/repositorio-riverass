@@ -552,244 +552,107 @@ body {
 
 
 
-/* RESPONSIVO DE LA PAGINA PRINCIPAL */
+@media (max-width: 700px) {
 
-/* =====================================================
-   CORRECCIÓN FINAL DEL SLIDER EN CELULAR
-   ===================================================== */
-
-@media (max-width: 768px) {
-
-    /* El slider vuelve a ser horizontal */
-    .slider-container {
-        width: 100%;
-        height: auto;
-        min-height: 100vh;
-
-        display: flex;
-
-        overflow-x: auto;
-        overflow-y: hidden;
-
-        scroll-behavior: smooth;
-        scroll-snap-type: x mandatory;
-
-        -webkit-overflow-scrolling: touch;
-
-        scrollbar-width: none;
-    }
-
-    /* Ocultar barra de desplazamiento */
-    .slider-container::-webkit-scrollbar {
-        display: none;
-    }
-
-
-    /* Cada pantalla ocupa exactamente el celular */
-    .slider-container .pantalla {
-        flex: 0 0 100%;
-        width: 100%;
-        min-width: 100%;
-
-        height: auto;
-        min-height: 100vh;
-
-        scroll-snap-align: start;
-
-        padding: 40px 15px;
-    }
-
-
-    /* Contenido de cada pantalla */
-    .slider-container .contenido-seccion {
+    html,
+    body {
         width: 100%;
         max-width: 100%;
+        overflow-x: hidden;
     }
 
-
-    /* =================================================
-       LAS 4 TARJETAS DEL PRIMER SLIDER
-       ================================================= */
-
-    .slider-container .contenedor-tarjetas {
+    #menu {
         width: 100%;
-
-        display: grid;
-
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-
-        gap: 12px;
-
-        margin: 20px auto 0;
-    }
-
-
-    .slider-container .contenedor-tarjetas a {
-        width: 100%;
-        min-width: 0;
-    }
-
-
-    .slider-container .tarjeta-info {
-        width: 100%;
-        min-width: 0;
-
-        height: auto;
-        min-height: 245px;
-
-        padding: 10px;
-
+        max-width: 100%;
+        overflow-x: auto;
         box-sizing: border-box;
     }
 
+    #menu ul {
+        width: max-content;
+        min-width: 100%;
+    }
 
-    /* Imágenes */
-    .slider-container .tarjeta-info img {
+    .slider-container {
         width: 100%;
-        height: 105px;
-
-        object-fit: cover;
-
-        display: block;
+        max-width: 100%;
+        overflow: hidden;
     }
 
+    .pantalla {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        flex: 0 0 100%;
+        box-sizing: border-box;
+        padding: 90px 20px 50px;
+    }
 
-    /* Títulos */
-    .slider-container .tarjeta-info h3 {
-        font-size: 15px;
-        line-height: 1.2;
+    .contenido-seccion {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
 
-        margin: 10px 0 8px;
-
+    #texto {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
         text-align: center;
     }
 
-
-    /* Texto */
-    .slider-container .tarjeta-info p {
-        font-size: 12px;
-        line-height: 1.45;
-
-        margin: 0;
-
-        text-align: center;
+    #texto h1 {
+        font-size: 34px;
+        line-height: 1.15;
     }
 
-
-    /* =================================================
-       FLECHAS DEL SLIDER
-       ================================================= */
-
-    .slider-anterior,
-    .slider-siguiente {
-        display: flex !important;
-
-        position: fixed;
-
-        top: 50%;
-
-        transform: translateY(-50%);
-
-        z-index: 9998;
-
-        width: 45px;
-        height: 55px;
-
-        align-items: center;
-        justify-content: center;
-
-        font-size: 30px;
+    #texto p {
+        font-size: 18px;
     }
 
-
-    .slider-anterior {
-        left: 5px;
+    .contenedor-tarjetas {
+        width: 100%;
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        box-sizing: border-box;
     }
 
-
-    .slider-siguiente {
-        right: 5px;
+    .tarjeta-info {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
     }
 
-
-    /* =================================================
-       INDICADORES
-       ================================================= */
-
-    .slider-indicadores {
-        position: fixed;
-
-        bottom: 20px;
-
-        left: 50%;
-
-        transform: translateX(-50%);
-
-        z-index: 9998;
-
-        display: flex;
-
-        gap: 8px;
+    .tarjeta-imagen img {
+        max-width: 100%;
+        height: auto;
     }
 
-
-    .indicador {
-        width: 9px;
-        height: 9px;
-
-        padding: 0;
-
-        border-radius: 50%;
-    }
-}
-
-
-/* =====================================================
-   CELULARES PEQUEÑOS
-   ===================================================== */
-
-@media (max-width: 480px) {
-
-    .slider-container .pantalla {
-        padding: 30px 10px;
+    .seccion-abajo {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding: 70px 20px;
     }
 
-
-    .slider-container .contenedor-tarjetas {
-        gap: 10px;
+    .contenido-abajo {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
     }
 
-
-    .slider-container .tarjeta-info {
-        min-height: 220px;
-
-        padding: 8px;
+    .contenedor-cajas-nuevas {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
     }
 
-
-    .slider-container .tarjeta-info img {
-        height: 90px;
+    .caja-opaca {
+        max-width: 100%;
+        box-sizing: border-box;
     }
-
-
-    .slider-container .tarjeta-info h3 {
-        font-size: 13px;
-    }
-
-
-    .slider-container .tarjeta-info p {
-        font-size: 11px;
-    }
-
-
-    .slider-anterior,
-    .slider-siguiente {
-        width: 38px;
-        height: 48px;
-
-        font-size: 25px;
-    }
-
 }
 
 
