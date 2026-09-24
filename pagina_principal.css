@@ -552,41 +552,220 @@ body {
 
 
 
-/* ADAPTABILIDAD EN MÓVILES */
-@media (max-width: 600px) {
-    .seccion-tarjeta {
-        padding: 22px 16px;
+/* =========================================
+   CELULAR
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    html,
+    body {
+        width: 100%;
+        overflow-x: hidden;
     }
 
-    .titulo {
-        font-size: 1.5rem;
+    /* MENÚ */
+    #menu {
+        height: 60px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    #menu ul {
+        width: 100%;
+        gap: 0;
+    }
+
+    #menu a {
+        padding: 20px 6px;
+        font-size: 11px;
+    }
+
+
+    /* =====================================
+       SLIDER
+       ===================================== */
+
+    .slider-container {
+        width: 100vw;
+        height: 100vh;
+
+        display: flex;
+        flex-direction: row;
+
+        overflow: hidden;
+
+        scroll-behavior: smooth;
+    }
+
+    .pantalla {
+        width: 100vw;
+        min-width: 100vw;
+
+        height: 100vh;
+        min-height: 100vh;
+
+        flex: 0 0 100vw;
+
+        padding: 85px 15px 30px;
+
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        box-sizing: border-box;
+    }
+
+
+    /* CONTENIDO */
+    .contenido-seccion {
+        width: 100%;
+        max-width: 100%;
+        gap: 20px;
+    }
+
+
+    /* TÍTULO */
+    #texto {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    #texto h1,
+    #texto h2 {
+        font-size: 36px;
+        line-height: 1.05;
+        letter-spacing: 1px;
+        margin-bottom: 18px;
+    }
+
+    #texto p {
+        font-size: 14px;
+        line-height: 1.5;
+        padding: 0 5px;
+    }
+
+
+    /* =====================================
+       LAS 4 CAJITAS
+       ===================================== */
+
+    .contenedor-tarjetas {
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 12px;
+    }
+
+    .contenedor-tarjetas a {
+        width: 100%;
+    }
+
+    .tarjeta-info {
+        width: 100%;
+        height: 230px;
+
+        padding: 10px;
+
+        box-sizing: border-box;
+    }
+
+    .tarjeta-info img {
+        width: 100%;
+        height: 100px;
+
+        object-fit: cover;
+
+        margin-bottom: 10px;
+    }
+
+    .tarjeta-info h3 {
+        font-size: 13px;
+        line-height: 1.2;
+        letter-spacing: 1px;
+
+        margin-bottom: 8px;
+    }
+
+    .tarjeta-info p {
+        font-size: 11px;
+        line-height: 1.4;
+    }
+
+
+    /* =====================================
+       FLECHAS
+       ===================================== */
+
+    .slider-anterior,
+    .slider-siguiente {
+        z-index: 9999;
+    }
+
+
+    /* =====================================
+       CAJA DE SOFTWARE CENTRADA
+       ===================================== */
+
+    .fila-1 {
+        display: flex;
+        justify-content: center;
+    }
+
+    .fila-1 .caja-opaca {
+        width: 80%;
+        max-width: 500px;
     }
 }
 
 
+/* =========================================
+   CELULARES PEQUEÑOS
+   ========================================= */
 
+@media (max-width: 480px) {
 
-/* RESPONSIVO MÓVIL Y TABLETA */
-@media (max-width: 900px) {
-    .contenedor-servicios-grid {
-        grid-template-columns: repeat(2, 1fr);
+    #menu a {
+        font-size: 9px;
+        padding: 20px 3px;
     }
-    .card-destacada, .card-destacada-final, .card-horizontal {
-        grid-column: span 2;
-    }
-    .card-vertical {
-        grid-column: span 1;
-        grid-row: span 1;
-    }
-}
 
-@media (max-width: 600px) {
-    .contenedor-servicios-grid {
-        grid-template-columns: 1fr;
+    .pantalla {
+        padding: 80px 10px 25px;
     }
-    .card-destacada, .card-destacada-final, .card-horizontal, .card-vertical {
-        grid-column: span 1;
-        grid-row: span 1;
+
+    #texto h1,
+    #texto h2 {
+        font-size: 30px;
+    }
+
+    #texto p {
+        font-size: 13px;
+    }
+
+    .contenedor-tarjetas {
+        gap: 10px;
+    }
+
+    .tarjeta-info {
+        height: 215px;
+        padding: 8px;
+    }
+
+    .tarjeta-info img {
+        height: 85px;
+    }
+
+    .tarjeta-info h3 {
+        font-size: 12px;
+    }
+
+    .tarjeta-info p {
+        font-size: 10px;
     }
 }
 
