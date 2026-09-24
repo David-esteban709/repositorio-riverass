@@ -553,239 +553,93 @@ body {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media (max-width: 950px) {
-
-#menu {
-    height: auto;
-    min-height: 60px;
+/* RESPONSIVO MÓVIL Y TABLETA */
+@media (max-width: 900px) {
+    .contenedor-servicios-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .card-destacada, .card-destacada-final, .card-horizontal {
+        grid-column: span 2;
+    }
+    .card-vertical {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
 }
 
-#menu ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 0;
-}
 
-#menu a {
-    padding: 20px 10px;
-    font-size: 11px;
-}
 
-.pantalla {
-    padding: 100px 8% 60px;
-}
 
-#texto h1,
-#texto h2 {
-    font-size: 45px;
-    line-height: 1.1;
-}
 
-#texto p {
-    font-size: 15px;
-    line-height: 1.6;
-}
 
-.contenedor-tarjetas {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-    width: 90%;
-    margin: auto;
-}
 
-.tarjeta-info {
-    height: 210px;
-}
+@media (max-width: 700px) {
 
-.tarjeta-info img {
-    height: 85px;
-}
-
-.slider-anterior {
-    left: 10px;
-}
-
-.slider-siguiente {
-    right: 10px;
-}
-
-.fila-asimetrica-1,
-.fila-cuatro,
-.fila-asimetrica-2 {
-    grid-template-columns: 1fr 1fr;
-}
-
-}
-
-@media (max-width: 650px) {
-
-#menu {
-    height: auto;
-    min-height: 60px;
-}
-
-#menu ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-}
-
-#menu a {
-    padding: 15px 7px;
-    font-size: 10px;
-    line-height: 1.2;
-}
-
-#menu ul ul {
-    top: 60px;
-}
-
-.pantalla {
-    width: 100%;
-    min-height: 100vh;
-    padding: 100px 7% 50px;
-}
-
-#texto {
-    width: 100%;
-    max-width: 100%;
-}
-
-#texto h1,
-#texto h2 {
-    font-size: 36px;
-    line-height: 1.1;
-    letter-spacing: 0;
-}
-
-#texto p {
-    font-size: 14px;
-    line-height: 1.6;
-}
-
-.contenedor-tarjetas {
-    width: 100%;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-}
-
-.tarjeta-info {
-    width: 100%;
-    height: 195px;
-    padding: 10px;
-}
-
-.tarjeta-info img {
-    width: 100%;
-    height: 70px;
-    object-fit: cover;
-    margin-bottom: 8px;
-}
-
-.tarjeta-info h3 {
-    font-size: 11px;
-    line-height: 1.2;
-    letter-spacing: 0.5px;
-}
-
-.tarjeta-info p {
-    font-size: 10px;
-    line-height: 1.4;
-}
-
-.slider-anterior,
-.slider-siguiente {
-    width: 35px;
-    height: 35px;
-    font-size: 18px;
-}
-
-.slider-anterior {
-    left: 5px;
-}
-
-.slider-siguiente {
-    right: 5px;
-}
-
-.contenedor-cajas-nuevas,
-.fila-asimetrica-1,
-.fila-cuatro,
-.fila-asimetrica-2 {
-    display: flex;
+nav {
     flex-direction: column;
-    width: 100%;
+    gap: 20px;
+}
+
+nav h2 {
+    text-align: center;
+}
+
+nav a {
+    margin: 0 8px;
+    font-size: 14px;
+}
+
+.inicio {
+    text-align: center;
+    align-items: center;
+}
+
+.inicio h1 {
+    font-size: 48px;
+}
+
+.inicio p {
+    font-size: 16px;
+}
+
+section {
+    padding: 60px 0;
+}
+
+section h2 {
+    font-size: 32px;
+}
+
+.tarjetas,
+.pasos,
+.lista,
+.ejemplos-contenedor {
+    grid-template-columns: 1fr;
 }
 
 }
 
-@media (max-width: 400px) {
-
-#menu a {
-    padding: 13px 5px;
-    font-size: 9px;
+@media (max-width: 600px) {
+    .contenedor-servicios-grid {
+        grid-template-columns: 1fr;
+    }
+    .card-destacada, .card-destacada-final, .card-horizontal, .card-vertical {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
 }
 
-.pantalla {
-    padding: 95px 6% 45px;
-}
 
-#texto h1,
-#texto h2 {
-    font-size: 31px;
-}
 
-#texto p {
-    font-size: 13px;
-}
 
-.contenedor-tarjetas {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
-}
 
-.tarjeta-info {
-    height: 180px;
-    padding: 8px;
-}
 
-.tarjeta-info img {
-    height: 60px;
-}
 
-.tarjeta-info h3 {
-    font-size: 10px;
-}
 
-.tarjeta-info p {
-    font-size: 9px;
-}
 
-.slider-anterior,
-.slider-siguiente {
-    width: 32px;
-    height: 32px;
-}
 
-}
+
+
+
+
+
