@@ -555,178 +555,370 @@ body {
 /* RESPONSIVO DE LA PAGINA PRINCIPAL */
 
 /* =====================================================
-   VISTA PARA CELULAR
+   RESPONSIVE REAL PARA CELULARES
    ===================================================== */
 
 @media (max-width: 768px) {
 
-    /* La página ocupa todo el ancho */
+    html,
     body {
         width: 100%;
         max-width: 100%;
         overflow-x: hidden;
     }
 
-    /* -----------------------------
+    /* =========================================
        MENÚ
-       ----------------------------- */
+       ========================================= */
 
     #menu {
-        width: 100%;
         position: relative;
-        top: 0;
-        left: 0;
+        width: 100%;
         height: auto;
+        min-height: 70px;
+        padding: 5px 0;
     }
 
     #menu ul {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        flex-wrap: nowrap;
         width: 100%;
-        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0;
     }
 
     #menu li {
-        flex: 1;
+        width: 100%;
         text-align: center;
     }
 
     #menu a {
-        display: block;
-        padding: 15px 5px;
-        font-size: 14px;
+        padding: 12px 3px;
+        font-size: 11px;
+        line-height: 1.2;
     }
 
 
-    /* -----------------------------
-       TÍTULO PRINCIPAL
-       ----------------------------- */
+    /* =========================================
+       SLIDER PRINCIPAL
+       
+       En celular deja de comportarse como
+       slider horizontal y muestra la página
+       normalmente.
+       ========================================= */
 
-    .inicio h1 {
-        font-size: 38px;
-        line-height: 1.05;
-        padding: 25px 20px 10px;
-        text-align: center;
-    }
-
-    .inicio p {
-        font-size: 16px;
-        line-height: 1.4;
-        padding: 0 25px;
-        text-align: center;
-    }
-
-
-    /* -----------------------------
-       SLIDER / CUATRO TARJETAS
-       ----------------------------- */
-
-    .slider-wrapper {
+    .slider-container {
         width: 100%;
         height: auto;
-        padding: 20px 15px 40px;
+        min-height: 0;
+
+        display: block;
+
         overflow: visible;
+
+        position: relative;
     }
 
-    .slider {
-        width: 100% !important;
-        display: grid !important;
 
-        /* 2 tarjetas arriba + 2 abajo */
+    /* =========================================
+       CADA PANTALLA
+       ========================================= */
+
+    .pantalla {
+        width: 100%;
+        min-width: 100%;
+
+        height: auto;
+        min-height: 0;
+
+        padding: 45px 15px 50px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    /* =========================================
+       CONTENIDO
+       ========================================= */
+
+    .contenido-seccion {
+        width: 100%;
+        max-width: 100%;
+
+        gap: 22px;
+    }
+
+
+    /* =========================================
+       TÍTULO PRINCIPAL
+       ========================================= */
+
+    #texto {
+        width: 100%;
+        max-width: 100%;
+
+        text-align: center;
+    }
+
+    #texto h1,
+    #texto h2 {
+        font-size: clamp(30px, 8vw, 42px);
+
+        line-height: 1.05;
+
+        letter-spacing: 1px;
+
+        margin-bottom: 18px;
+    }
+
+    #texto {
+        color: #d8dce0;
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+
+    /* =========================================
+       LAS 4 TARJETAS
+       
+       2 arriba + 2 abajo
+       ========================================= */
+
+    .contenedor-tarjetas {
+        width: 100%;
+
+        display: grid;
+
         grid-template-columns: repeat(2, minmax(0, 1fr));
 
-        gap: 18px;
-
-        /* Evita que el JS del slider las mueva */
-        transform: none !important;
-
-        margin: 0 auto;
+        gap: 12px;
     }
 
 
-    /* -----------------------------
+    .contenedor-tarjetas a {
+        width: 100%;
+        min-width: 0;
+    }
+
+
+    /* =========================================
        TARJETAS
-       ----------------------------- */
+       ========================================= */
 
-    .card {
-        width: 100% !important;
-        min-width: 0 !important;
-        height: auto !important;
+    .tarjeta-info {
+        width: 100%;
+        height: auto;
+        min-height: 250px;
 
-        margin: 0 !important;
         padding: 10px;
 
         overflow: hidden;
     }
 
 
-    /* IMÁGENES */
+    /* =========================================
+       IMÁGENES DE LAS 4 TARJETAS
+       ========================================= */
 
-    .card img {
-        display: block;
+    .tarjeta-info img {
         width: 100%;
-        height: 135px;
+        height: 105px;
 
         object-fit: cover;
+
+        margin-bottom: 10px;
     }
 
 
-    /* TÍTULO DE CADA TARJETA */
+    /* =========================================
+       TÍTULO DE LAS TARJETAS
+       ========================================= */
 
-    .card h2 {
-        font-size: 17px;
-        line-height: 1.15;
-        margin: 12px 3px 8px;
-        text-align: center;
+    .tarjeta-info h3 {
+        font-size: 14px;
+
+        line-height: 1.25;
+
+        letter-spacing: 1px;
+
+        margin-bottom: 8px;
     }
 
 
-    /* TEXTO DE CADA TARJETA */
+    /* =========================================
+       TEXTO DE LAS TARJETAS
+       ========================================= */
 
-    .card p {
-        font-size: 13px;
+    .tarjeta-info p {
+        font-size: 12px;
+
         line-height: 1.45;
 
-        margin: 0 5px 10px;
-
-        text-align: center;
+        margin: 0;
     }
 
 
-    /* -----------------------------
-       FLECHAS DEL SLIDER
-       ----------------------------- */
+    /* =========================================
+       OCULTAR FLECHAS EN CELULAR
+       ========================================= */
 
-    .prev,
-    .next {
+    .slider-anterior,
+    .slider-siguiente {
         display: none !important;
     }
 
 
-    /* -----------------------------
-       PUNTOS
-       ----------------------------- */
+    /* =========================================
+       OCULTAR INDICADORES DEL SLIDER
+       ========================================= */
 
-    .dots {
-        margin-top: 15px;
+    .slider-indicadores {
+        display: none !important;
     }
 
 
-    /* -----------------------------
-       SECCIÓN "EL PODER DEL
-       DESARROLLO DE SOFTWARE"
-       ----------------------------- */
+    /* =========================================
+       SECCIÓN:
+       EL PODER DEL DESARROLLO DE SOFTWARE
+       ========================================= */
 
-    .desarrollo h1 {
-        font-size: 38px;
+    .seccion-abajo {
+        width: 100%;
+
+        min-height: auto;
+
+        padding: 70px 15px;
+
+        display: block;
+    }
+
+
+    .contenido-abajo {
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+    .contenido-abajo h2,
+    .titulo-ia {
+        width: 100%;
+
+        font-size: clamp(32px, 9vw, 42px);
+
         line-height: 1.1;
-        text-align: center;
 
-        padding: 45px 20px 25px;
+        letter-spacing: 1px;
+
+        margin-bottom: 30px;
+
+        text-align: center;
     }
 
+
+    /* =========================================
+       CAJAS DE SOFTWARE
+       ========================================= */
+
+    .contenedor-cajas-nuevas {
+        width: 100%;
+
+        gap: 12px;
+
+        margin-bottom: 12px;
+    }
+
+
+    /* Las 3 cajas pasan a 2 columnas */
+    .fila-3 {
+        display: grid;
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+
+    /* Las 2 cajas permanecen en 2 columnas */
+    .fila-2 {
+        display: grid;
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+
+    /* La última caja ocupa todo */
+    .fila-1 {
+        display: grid;
+
+        grid-template-columns: 1fr;
+    }
+
+
+    /* =========================================
+       CAJAS
+       ========================================= */
+
+    .caja-opaca {
+        width: 100%;
+
+        min-width: 0;
+
+        padding: 18px 12px;
+    }
+
+
+    .caja-opaca h3 {
+        font-size: 14px;
+
+        line-height: 1.3;
+
+        letter-spacing: 1px;
+    }
+
+
+    .caja-opaca p {
+        font-size: 12px;
+
+        line-height: 1.55;
+    }
+
+
+    /* =========================================
+       SECCIÓN DE INTELIGENCIA ARTIFICIAL
+       ========================================= */
+
+    .fila-asimetrica-1,
+    .fila-asimetrica-2 {
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+    }
+
+
+    .fila-cuatro {
+        display: grid;
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 12px;
+    }
+
+
+    .caja-mini {
+        padding: 15px 10px;
+    }
+
+
+    .caja-mini h3 {
+        font-size: 13px;
+    }
+
+
+    .caja-mini p {
+        font-size: 11px;
+        line-height: 1.5;
+    }
 }
 
 
@@ -736,46 +928,153 @@ body {
 
 @media (max-width: 480px) {
 
+    /* -----------------------------------------
+       MENÚ
+       ----------------------------------------- */
+
+    #menu {
+        min-height: 62px;
+    }
+
     #menu a {
-        font-size: 12px;
-        padding: 14px 3px;
+        font-size: 10px;
+
+        padding: 10px 2px;
     }
 
-    .inicio h1 {
-        font-size: 32px;
+
+    /* -----------------------------------------
+       PANTALLA PRINCIPAL
+       ----------------------------------------- */
+
+    .pantalla {
+        padding: 35px 10px 40px;
     }
 
-    .inicio p {
-        font-size: 14px;
-        padding: 0 20px;
+
+    #texto h1,
+    #texto h2 {
+        font-size: 30px;
+
+        line-height: 1.08;
+
+        letter-spacing: 0.5px;
     }
 
-    .slider-wrapper {
-        padding: 15px 10px 30px;
+
+    #texto {
+        font-size: 13px;
+
+        line-height: 1.45;
     }
 
-    .slider {
-        gap: 12px;
+
+    /* -----------------------------------------
+       4 TARJETAS
+       ----------------------------------------- */
+
+    .contenedor-tarjetas {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 10px;
     }
 
-    .card {
+
+    .tarjeta-info {
+        min-height: 225px;
+
         padding: 8px;
     }
 
-    .card img {
-        height: 110px;
+
+    .tarjeta-info img {
+        height: 90px;
+
+        margin-bottom: 8px;
     }
 
-    .card h2 {
-        font-size: 15px;
-    }
 
-    .card p {
+    .tarjeta-info h3 {
         font-size: 12px;
+
+        letter-spacing: 0.5px;
+
+        line-height: 1.2;
     }
 
-    .desarrollo h1 {
-        font-size: 32px;
+
+    .tarjeta-info p {
+        font-size: 11px;
+
+        line-height: 1.4;
+    }
+
+
+    /* -----------------------------------------
+       TÍTULO SOFTWARE
+       ----------------------------------------- */
+
+    .seccion-abajo {
+        padding: 55px 10px;
+    }
+
+
+    .contenido-abajo h2,
+    .titulo-ia {
+        font-size: 30px;
+
+        line-height: 1.1;
+
+        letter-spacing: 0;
+
+        margin-bottom: 25px;
+    }
+
+
+    /* -----------------------------------------
+       CAJAS DE SOFTWARE
+       ----------------------------------------- */
+
+    .fila-3 {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .fila-2 {
+        grid-template-columns: 1fr;
+    }
+
+
+    .fila-1 {
+        grid-template-columns: 1fr;
+    }
+
+
+    .caja-opaca {
+        padding: 16px 10px;
+    }
+
+
+    .caja-opaca h3 {
+        font-size: 13px;
+
+        line-height: 1.25;
+    }
+
+
+    .caja-opaca p {
+        font-size: 11px;
+
+        line-height: 1.5;
+    }
+
+
+    /* -----------------------------------------
+       IA
+       ----------------------------------------- */
+
+    .fila-cuatro {
+        grid-template-columns: 1fr 1fr;
     }
 
 }
