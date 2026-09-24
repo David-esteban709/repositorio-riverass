@@ -552,51 +552,44 @@ body {
 
 
 
-@media (max-width: 700px) {
+/* ADAPTABILIDAD EN MÓVILES */
+@media (max-width: 600px) {
+    .seccion-tarjeta {
+        padding: 22px 16px;
+    }
 
-nav {
-    flex-direction: column;
-    gap: 20px;
+    .titulo {
+        font-size: 1.5rem;
+    }
 }
 
-nav h2 {
-    text-align: center;
+
+
+
+/* RESPONSIVO MÓVIL Y TABLETA */
+@media (max-width: 900px) {
+    .contenedor-servicios-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .card-destacada, .card-destacada-final, .card-horizontal {
+        grid-column: span 2;
+    }
+    .card-vertical {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
 }
 
-nav a {
-    margin: 0 8px;
-    font-size: 14px;
+@media (max-width: 600px) {
+    .contenedor-servicios-grid {
+        grid-template-columns: 1fr;
+    }
+    .card-destacada, .card-destacada-final, .card-horizontal, .card-vertical {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
 }
 
-.inicio {
-    text-align: center;
-    align-items: center;
-}
-
-.inicio h1 {
-    font-size: 48px;
-}
-
-.inicio p {
-    font-size: 16px;
-}
-
-section {
-    padding: 60px 0;
-}
-
-section h2 {
-    font-size: 32px;
-}
-
-.tarjetas,
-.pasos,
-.lista,
-.ejemplos-contenedor {
-    grid-template-columns: 1fr;
-}
-
-}
 
 
 
