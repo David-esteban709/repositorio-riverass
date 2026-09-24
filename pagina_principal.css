@@ -872,23 +872,43 @@ body {
     }
 
 
-    /* ==============================
-       SOLO CAJAS DE SOFTWARE
+/* ==============================
+       CAJAS DE SOFTWARE (FORZADO)
        ============================== */
 
-    .fila-3 {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 10px;
+    .fila-3,
+    .fila-2,
+    .fila-1 {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+        width: 100% !important;
     }
 
-    .fila-2 {
-        gap: 10px;
+    .fila-2 .caja-opaca,
+    .fila-1 .caja-opaca {
+        width: 100% !important;
+        max-width: 100% !important;
     }
 
-    .fila-2 .caja-opaca {
-        width: calc(50% - 5px);
+
+    /* ==============================
+       CAJAS DE INTELIGENCIA (FORZADO)
+       ============================== */
+
+    .fila-cuatro {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+        width: 100% !important;
     }
 
+    .caja-opaca {
+        width: 100% !important;
+        box-sizing: border-box !important;
+        padding: 20px 15px !important;
+        text-align: center !important;
+    }
 
     /* ==============================
        SOLO CAJAS DE INTELIGENCIA
