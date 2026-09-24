@@ -554,89 +554,118 @@ body {
 
 /* RESPONSIVO DE LA PAGINA PRINCIPAL */
 
+/* ============================= */
+/* AJUSTE FINAL PARA CELULARES */
+/* ============================= */
+
 @media (max-width: 700px) {
 
-    html,
-    body {
-        width: 100%;
-        max-width: 100%;
-        overflow-x: hidden;
-    }
+    /* MENU */
 
     #menu {
         width: 100%;
-        max-width: 100%;
-        overflow-x: auto;
+        height: auto;
+        min-height: 90px;
+        padding: 10px 5px;
         box-sizing: border-box;
-    }
-
-    #menu ul {
-        width: max-content;
-        min-width: 100%;
-    }
-
-    .slider-container {
-        width: 100%;
-        max-width: 100%;
         overflow: hidden;
     }
 
-    .pantalla {
+    #menu ul {
         width: 100%;
-        min-width: 100%;
-        max-width: 100%;
-        flex: 0 0 100%;
-        box-sizing: border-box;
-        padding: 90px 20px 50px;
-    }
-
-    .contenido-seccion {
-        width: 100%;
-        max-width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5px;
+        padding: 0;
+        margin: 0;
         box-sizing: border-box;
     }
 
-    #texto {
+    #menu li {
         width: 100%;
-        max-width: 100%;
-        box-sizing: border-box;
         text-align: center;
+        box-sizing: border-box;
     }
 
-    #texto h1 {
-        font-size: 34px;
-        line-height: 1.15;
+    #menu a {
+        display: block;
+        width: 100%;
+        padding: 7px 2px;
+        font-size: 12px;
+        box-sizing: border-box;
+        white-space: normal;
     }
 
-    #texto p {
-        font-size: 18px;
-    }
+
+    /* ============================= */
+    /* TARJETAS DEL SLIDER */
+    /* ============================= */
 
     .contenedor-tarjetas {
         width: 100%;
-        max-width: 100%;
         display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(2, 1fr);
         gap: 12px;
         box-sizing: border-box;
     }
 
     .tarjeta-info {
         width: 100%;
-        max-width: 100%;
+        min-width: 0;
         box-sizing: border-box;
+    }
+
+    .tarjeta-imagen {
+        width: 100%;
+        text-align: center;
     }
 
     .tarjeta-imagen img {
-        max-width: 100%;
+        max-width: 85%;
         height: auto;
     }
 
-    .seccion-abajo {
+
+    /* ============================= */
+    /* CAJAS DE DESARROLLO */
+    /* ============================= */
+
+    .contenedor-cajas-nuevas {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr !important;
+        gap: 20px;
+        box-sizing: border-box;
+    }
+
+    .caja-opaca {
         width: 100%;
         max-width: 100%;
+        min-width: 0;
         box-sizing: border-box;
-        padding: 70px 20px;
+        padding: 25px 20px;
+    }
+
+    .caja-opaca h3 {
+        font-size: 22px;
+        line-height: 1.3;
+    }
+
+    .caja-opaca p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+
+    /* ============================= */
+    /* TITULOS DE LAS SECCIONES */
+    /* ============================= */
+
+    .titulo-ia {
+        font-size: 38px;
+        line-height: 1.15;
+        text-align: center;
+        word-wrap: break-word;
     }
 
     .contenido-abajo {
@@ -645,14 +674,9 @@ body {
         box-sizing: border-box;
     }
 
-    .contenedor-cajas-nuevas {
+    .seccion-abajo {
         width: 100%;
-        max-width: 100%;
-        box-sizing: border-box;
-    }
-
-    .caja-opaca {
-        max-width: 100%;
+        padding: 70px 20px;
         box-sizing: border-box;
     }
 }
