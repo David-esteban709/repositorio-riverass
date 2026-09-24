@@ -555,114 +555,207 @@ body {
 /* RESPONSIVO DE LA PAGINA PRINCIPAL */
 
 /* =====================================================
-   AJUSTE PARA CELULARES
+   VISTA PARA CELULAR
    ===================================================== */
 
 @media (max-width: 768px) {
 
-    /* Ocultar el menú superior en celular */
-    #menu {
-        display: none !important;
-    }
-
-    /* Evitar que aparezca desplazamiento horizontal */
+    /* La página ocupa todo el ancho */
     body {
+        width: 100%;
+        max-width: 100%;
         overflow-x: hidden;
     }
 
-    /* -------------------------------
-       CONTENEDOR DE LAS TARJETAS
-       ------------------------------- */
+    /* -----------------------------
+       MENÚ
+       ----------------------------- */
+
+    #menu {
+        width: 100%;
+        position: relative;
+        top: 0;
+        left: 0;
+        height: auto;
+    }
+
+    #menu ul {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: nowrap;
+        width: 100%;
+        padding: 0;
+    }
+
+    #menu li {
+        flex: 1;
+        text-align: center;
+    }
+
+    #menu a {
+        display: block;
+        padding: 15px 5px;
+        font-size: 14px;
+    }
+
+
+    /* -----------------------------
+       TÍTULO PRINCIPAL
+       ----------------------------- */
+
+    .inicio h1 {
+        font-size: 38px;
+        line-height: 1.05;
+        padding: 25px 20px 10px;
+        text-align: center;
+    }
+
+    .inicio p {
+        font-size: 16px;
+        line-height: 1.4;
+        padding: 0 25px;
+        text-align: center;
+    }
+
+
+    /* -----------------------------
+       SLIDER / CUATRO TARJETAS
+       ----------------------------- */
 
     .slider-wrapper {
         width: 100%;
         height: auto;
-        padding: 20px 10px 35px;
+        padding: 20px 15px 40px;
         overflow: visible;
     }
 
-    /* Convertimos el slider en una cuadrícula */
     .slider {
-        display: grid !important;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-        transform: none !important;
         width: 100% !important;
+        display: grid !important;
+
+        /* 2 tarjetas arriba + 2 abajo */
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 18px;
+
+        /* Evita que el JS del slider las mueva */
+        transform: none !important;
+
+        margin: 0 auto;
     }
 
-    /* -------------------------------
+
+    /* -----------------------------
        TARJETAS
-       ------------------------------- */
+       ----------------------------- */
 
     .card {
         width: 100% !important;
         min-width: 0 !important;
-        height: auto;
+        height: auto !important;
+
         margin: 0 !important;
         padding: 10px;
+
+        overflow: hidden;
     }
 
-    /* Imágenes de las tarjetas */
+
+    /* IMÁGENES */
+
     .card img {
+        display: block;
         width: 100%;
-        height: 150px;
+        height: 135px;
+
         object-fit: cover;
     }
 
-    /* Títulos */
+
+    /* TÍTULO DE CADA TARJETA */
+
     .card h2 {
-        font-size: 20px;
+        font-size: 17px;
         line-height: 1.15;
-        margin: 12px 5px 8px;
-    }
-
-    /* Texto */
-    .card p {
-        font-size: 15px;
-        line-height: 1.5;
-        margin: 0 5px 10px;
-    }
-
-    /* Ocultar flechas del slider */
-    .prev,
-    .next,
-    .slider-btn,
-    .boton-slider {
-        display: none !important;
-    }
-
-    /* Ocultar los puntos del slider */
-    .dots,
-    .indicadores {
-        display: none !important;
-    }
-
-    /* -------------------------------
-       TÍTULO DE LA SECCIÓN SIGUIENTE
-       ------------------------------- */
-
-    #desarrollo h1,
-    .desarrollo h1 {
-        font-size: 42px;
-        line-height: 1.05;
-        padding: 30px 15px;
+        margin: 12px 3px 8px;
         text-align: center;
     }
+
+
+    /* TEXTO DE CADA TARJETA */
+
+    .card p {
+        font-size: 13px;
+        line-height: 1.45;
+
+        margin: 0 5px 10px;
+
+        text-align: center;
+    }
+
+
+    /* -----------------------------
+       FLECHAS DEL SLIDER
+       ----------------------------- */
+
+    .prev,
+    .next {
+        display: none !important;
+    }
+
+
+    /* -----------------------------
+       PUNTOS
+       ----------------------------- */
+
+    .dots {
+        margin-top: 15px;
+    }
+
+
+    /* -----------------------------
+       SECCIÓN "EL PODER DEL
+       DESARROLLO DE SOFTWARE"
+       ----------------------------- */
+
+    .desarrollo h1 {
+        font-size: 38px;
+        line-height: 1.1;
+        text-align: center;
+
+        padding: 45px 20px 25px;
+    }
+
 }
 
 
 /* =====================================================
-   CELULARES MÁS PEQUEÑOS
+   CELULARES PEQUEÑOS
    ===================================================== */
 
 @media (max-width: 480px) {
 
+    #menu a {
+        font-size: 12px;
+        padding: 14px 3px;
+    }
+
+    .inicio h1 {
+        font-size: 32px;
+    }
+
+    .inicio p {
+        font-size: 14px;
+        padding: 0 20px;
+    }
+
     .slider-wrapper {
-        padding: 15px 8px 30px;
+        padding: 15px 10px 30px;
     }
 
     .slider {
-        gap: 10px;
+        gap: 12px;
     }
 
     .card {
@@ -670,22 +763,21 @@ body {
     }
 
     .card img {
-        height: 125px;
+        height: 110px;
     }
 
     .card h2 {
-        font-size: 17px;
+        font-size: 15px;
     }
 
     .card p {
-        font-size: 13px;
-        line-height: 1.4;
+        font-size: 12px;
     }
 
-    #desarrollo h1,
     .desarrollo h1 {
-        font-size: 34px;
+        font-size: 32px;
     }
+
 }
 
 
