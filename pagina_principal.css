@@ -552,80 +552,108 @@ body {
 
 
 
-
-/* RESPONSIVO MÓVIL Y TABLETA */
-@media (max-width: 950px) {
-    .contenedor-servicios-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .card-destacada, .card-destacada-final, .card-horizontal {
-        grid-column: span 2;
-    }
-    .card-vertical {
-        grid-column: span 1;
-        grid-row: span 1;
-    }
-}
-
-
-
-
-
-
+/* RESPONSIVO DE LA PAGINA PRINCIPAL */
 
 @media (max-width: 700px) {
 
-nav {
-    flex-direction: column;
-    gap: 20px;
-}
-
-nav h2 {
-    text-align: center;
-}
-
-nav a {
-    margin: 0 8px;
-    font-size: 14px;
-}
-
-.inicio {
-    text-align: center;
-    align-items: center;
-}
-
-.inicio h1 {
-    font-size: 48px;
-}
-
-.inicio p {
-    font-size: 16px;
-}
-
-section {
-    padding: 60px 0;
-}
-
-section h2 {
-    font-size: 32px;
-}
-
-.tarjetas,
-.pasos,
-.lista,
-.ejemplos-contenedor {
-    grid-template-columns: 1fr;
-}
-
-}
-
-@media (max-width: 600px) {
-    .contenedor-servicios-grid {
-        grid-template-columns: 1fr;
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
     }
-    .card-destacada, .card-destacada-final, .card-horizontal, .card-vertical {
-        grid-column: span 1;
-        grid-row: span 1;
+
+    #menu {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+        box-sizing: border-box;
+    }
+
+    #menu ul {
+        width: max-content;
+        min-width: 100%;
+    }
+
+    .slider-container {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .pantalla {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        flex: 0 0 100%;
+        box-sizing: border-box;
+        padding: 90px 20px 50px;
+    }
+
+    .contenido-seccion {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    #texto {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    #texto h1 {
+        font-size: 34px;
+        line-height: 1.15;
+    }
+
+    #texto p {
+        font-size: 18px;
+    }
+
+    .contenedor-tarjetas {
+        width: 100%;
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        box-sizing: border-box;
+    }
+
+    .tarjeta-info {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .tarjeta-imagen img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .seccion-abajo {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding: 70px 20px;
+    }
+
+    .contenido-abajo {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .contenedor-cajas-nuevas {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .caja-opaca {
+        max-width: 100%;
+        box-sizing: border-box;
     }
 }
 
