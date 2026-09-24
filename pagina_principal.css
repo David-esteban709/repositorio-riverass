@@ -568,7 +568,6 @@ body {
 
 
 
-
 /* =========================================
    RESPONSIVE REAL DE LA PAGINA
    ========================================= */
@@ -614,13 +613,10 @@ body {
     .slider-container {
         width: 100%;
         height: auto;
-
         display: flex;
         flex-direction: row;
-
         overflow-x: hidden;
         overflow-y: visible;
-
         position: relative;
     }
 
@@ -629,18 +625,13 @@ body {
 
     .pantalla {
         flex: 0 0 100%;
-
         width: 100%;
         min-width: 100%;
         max-width: 100%;
-
         height: auto;
         min-height: 100vh;
-
         padding: 85px 15px 45px;
-
         box-sizing: border-box;
-
         display: flex;
         align-items: center;
         justify-content: center;
@@ -654,39 +645,28 @@ body {
     .contenido-seccion {
         width: 100%;
         max-width: 100%;
-
         gap: 25px;
     }
-
 
     #texto {
         width: 100%;
         max-width: 100%;
-
         text-align: center;
     }
-
 
     #texto h1,
     #texto h2 {
         font-size: clamp(30px, 8vw, 44px);
-
         line-height: 1.05;
-
         letter-spacing: 1px;
-
         margin-bottom: 18px;
     }
-
 
     #texto p {
         width: 100%;
         max-width: 600px;
-
         font-size: clamp(13px, 3.5vw, 16px);
-
         line-height: 1.55;
-
         margin: auto;
     }
 
@@ -697,57 +677,40 @@ body {
 
     .contenedor-tarjetas {
         width: 100%;
-
         display: grid;
-
         grid-template-columns: repeat(2, minmax(0, 1fr));
-
         gap: 12px;
     }
-
 
     .contenedor-tarjetas a {
         width: 100%;
         min-width: 0;
     }
 
-
     .tarjeta-info {
         width: 100%;
         height: 235px;
-
         padding: 10px;
-
         box-sizing: border-box;
-
         overflow: hidden;
     }
-
 
     .tarjeta-info img {
         width: 100%;
         height: 100px;
-
         object-fit: cover;
-
         margin-bottom: 10px;
     }
 
-
     .tarjeta-info h3 {
         font-size: 13px;
-
         line-height: 1.2;
-
         letter-spacing: 1px;
-
         margin-bottom: 8px;
     }
 
-
     .tarjeta-info p {
         font-size: 11px;
-
         line-height: 1.4;
     }
 
@@ -764,12 +727,10 @@ body {
         right: 7px;
     }
 
-
     .slider-anterior,
     .slider-siguiente {
         width: 40px;
         height: 45px;
-
         font-size: 23px;
     }
 
@@ -787,27 +748,48 @@ body {
        SECCIONES DE ABAJO
        ============================== */
 
-/* SOLO ACOMODAR LOS CUADROS EN CELULAR */
-
-@media (max-width: 768px) {
-
-    /* Cuadros de Software */
-    .contenedor-cajas-nuevas {
+    .seccion-abajo {
         width: 100%;
-        padding: 0 10px;
+        padding: 60px 15px;
         box-sizing: border-box;
     }
 
+    .contenido-abajo {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .titulo-ia {
+        font-size: clamp(32px, 9vw, 50px);
+        line-height: 1.05;
+        text-align: center;
+    }
+
+    .contenedor-cajas-nuevas {
+        width: 100%;
+        gap: 12px;
+    }
+
+
+    /* ==============================
+       CAJAS DE SOFTWARE
+       SOLO SE MODIFICÓ ESTO
+       ============================== */
+
     .fila-3 {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 12px;
     }
 
     .fila-2 {
-        display: grid;
-        grid-template-columns: 1fr;
+        display: flex;
+        justify-content: center;
         gap: 12px;
+    }
+
+    .fila-2 .caja-opaca {
+        width: calc(50% - 6px);
     }
 
     .fila-1 {
@@ -817,13 +799,18 @@ body {
 
     .fila-1 .caja-opaca {
         width: 100%;
-        max-width: 350px;
+        max-width: 500px;
     }
 
-    /* Cuadros de Inteligencia */
+
+    /* ==============================
+       CAJAS DE INTELIGENCIA
+       SOLO SE MODIFICÓ ESTO
+       ============================== */
+
     .fila-cuatro {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 12px;
     }
 
@@ -833,23 +820,6 @@ body {
     }
 }
 
-
-@media (max-width: 480px) {
-
-    .contenedor-cajas-nuevas {
-        padding: 0 8px;
-    }
-
-    .fila-3,
-    .fila-cuatro {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-    }
-
-    .caja-opaca {
-        width: 100%;
-    }
-}
 
 /* =========================================
    CELULARES PEQUEÑOS
@@ -862,52 +832,71 @@ body {
         font-size: 10px;
     }
 
-
     .pantalla {
         padding: 80px 10px 40px;
     }
-
 
     #texto h1,
     #texto h2 {
         font-size: clamp(28px, 8.5vw, 38px);
     }
 
-
     #texto p {
         font-size: 12px;
     }
 
-
     .contenedor-tarjetas {
         gap: 10px;
     }
-
 
     .tarjeta-info {
         height: 220px;
         padding: 8px;
     }
 
-
     .tarjeta-info img {
         height: 90px;
     }
-
 
     .tarjeta-info h3 {
         font-size: 12px;
     }
 
-
     .tarjeta-info p {
         font-size: 10px;
     }
-
 
     .slider-anterior,
     .slider-siguiente {
         width: 35px;
         height: 42px;
     }
-}}
+
+
+    /* ==============================
+       SOLO CAJAS DE SOFTWARE
+       ============================== */
+
+    .fila-3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .fila-2 {
+        gap: 10px;
+    }
+
+    .fila-2 .caja-opaca {
+        width: calc(50% - 5px);
+    }
+
+
+    /* ==============================
+       SOLO CAJAS DE INTELIGENCIA
+       ============================== */
+
+    .fila-cuatro {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+}
