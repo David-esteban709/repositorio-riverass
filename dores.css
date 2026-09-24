@@ -127,7 +127,7 @@ textarea.input {
     min-height: 100px;
 }
 
-/* ERRORES Y ALERTAS */
+
 .alerta-error {
     color: #f87171;
     font-size: 0.78rem;
@@ -149,7 +149,7 @@ textarea.input {
     display: none;
 }
 
-/* BOTÓN DE ACCIÓN */
+
 .boton {
     width: 100%;
     background: linear-gradient(135deg, #facc15 0%, #eab308 50%, #d97706 100%);
@@ -191,7 +191,7 @@ textarea.input {
     color: #facc15;
 }
 
-/* RESPONSIVO */
+
 @media (max-width: 580px) {
     .bloque {
         grid-template-columns: 1fr;

@@ -1,8 +1,3 @@
-/* ==========================================
-   HOJA DE ESTILOS DE MISIÓN (ESTILO MONOCROMÁTICO)
-   ========================================== */
-
-/* --- PALETA DE COLORES BLANCO Y NEGRO --- */
 :root {
   --color-fondo: #000000;
   --fondo-tarjeta: rgba(18, 18, 18, 0.85);
@@ -15,7 +10,7 @@
   --fuente-cuerpo: 'Rajdhani', sans-serif;
 }
 
-/* --- ESTILOS BASE --- */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -35,7 +30,7 @@ body {
   overflow-x: hidden;
 }
 
-/* FONDO CON IMAGEN MISION.JPG */
+
 .imagen-fondo {
   position: fixed;
   top: 0;
@@ -50,7 +45,7 @@ body {
   animation: pulsoFondo 10s ease-in-out infinite alternate;
 }
 
-/* --- TARJETA PRINCIPAL --- */
+
 .seccion-mision {
   position: relative;
   z-index: 2;
@@ -81,7 +76,7 @@ body {
              resplandorBorde 4s infinite alternate;
 }
 
-/* --- ENCABEZADO --- */
+
 .encabezado-tarjeta {
   display: flex;
   justify-content: space-between;
@@ -125,7 +120,7 @@ body {
   animation: titilarEstado 1.5s infinite;
 }
 
-/* --- TÍTULO --- */
+
 .titulo-mision {
   font-family: var(--fuente-titulo);
   font-size: 2.8rem;
@@ -138,7 +133,7 @@ body {
              latidoTitulo 3s ease-in-out infinite alternate 0.8s;
 }
 
-/* --- BLOQUE DECLARACIÓN --- */
+
 .bloque-declaracion {
   display: flex;
   flex-direction: column;
@@ -165,7 +160,7 @@ body {
   line-height: 1.4;
 }
 
-/* --- CUERPO DE INFORMACIÓN --- */
+
 .cuerpo-informacion {
   margin-bottom: 35px;
 }
@@ -189,7 +184,7 @@ body {
   animation: entradaDescripcion 0.9s ease-out 0.85s forwards;
 }
 
-/* --- GRILLA DE PILARES (6 CAJAS) --- */
+
 .grilla-pilares {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -255,7 +250,7 @@ body {
   line-height: 1.4;
 }
 
-/* --- BARRA DE PROGRESO --- */
+
 .contenedor-progreso {
   margin-bottom: 35px;
 }
@@ -285,7 +280,7 @@ body {
              brilloBarra 2s ease-in-out infinite alternate;
 }
 
-/* --- BOTÓN Y PIE DE TARJETA --- */
+
 .pie-tarjeta {
   text-align: center;
 }
@@ -311,7 +306,7 @@ body {
   transform: scale(1.03);
 }
 
-/* --- FOOTER ORIGINAL TAL CUAL LA PÁGINA VISIÓN --- */
+
 .pagina {
   width: 100%;
   position: relative;
@@ -341,9 +336,7 @@ body {
   text-decoration: underline;
 }
 
-/* ==========================================
-   ANIMACIONES (KEYFRAMES)
-   ========================================== */
+
 
 @keyframes titilarEstado {
   0%, 100% { opacity: 1; transform: scale(1); }
