@@ -787,67 +787,69 @@ body {
        SECCIONES DE ABAJO
        ============================== */
 
-    .seccion-abajo {
+/* SOLO ACOMODAR LOS CUADROS EN CELULAR */
+
+@media (max-width: 768px) {
+
+    /* Cuadros de Software */
+    .contenedor-cajas-nuevas {
         width: 100%;
-        padding: 60px 15px;
+        padding: 0 10px;
         box-sizing: border-box;
     }
 
-    .contenido-abajo {
-        width: 100%;
-        max-width: 100%;
-    }
-
-
-    .titulo-ia {
-        font-size: clamp(32px, 9vw, 50px);
-        line-height: 1.05;
-        text-align: center;
-    }
-
-
-    .contenedor-cajas-nuevas {
-        width: 100%;
-        gap: 12px;
-    }
-
-
     .fila-3 {
         display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
     }
-
 
     .fila-2 {
         display: grid;
         grid-template-columns: 1fr;
+        gap: 12px;
     }
-
 
     .fila-1 {
         display: flex;
         justify-content: center;
     }
 
-
     .fila-1 .caja-opaca {
         width: 100%;
-        max-width: 500px;
+        max-width: 350px;
     }
 
+    /* Cuadros de Inteligencia */
+    .fila-cuatro {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
 
     .caja-opaca {
         width: 100%;
         box-sizing: border-box;
     }
-
-
-    .fila-cuatro {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
 }
 
+
+@media (max-width: 480px) {
+
+    .contenedor-cajas-nuevas {
+        padding: 0 8px;
+    }
+
+    .fila-3,
+    .fila-cuatro {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .caja-opaca {
+        width: 100%;
+    }
+}
 
 /* =========================================
    CELULARES PEQUEÑOS
@@ -908,4 +910,4 @@ body {
         width: 35px;
         height: 42px;
     }
-}
+}}
