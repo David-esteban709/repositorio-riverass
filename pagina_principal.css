@@ -575,9 +575,9 @@ body {
 
     html,
     body {
-        width: 100%;
-        max-width: 100%;
-        overflow-x: hidden;
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: hidden !important;
     }
 
 
@@ -624,13 +624,13 @@ body {
 
     .pantalla {
         flex: 0 0 100%;
-        width: 100%;
-        min-width: 100%;
-        max-width: 100%;
+        width: 100% !important;
+        min-width: 100% !important;
+        max-width: 100% !important;
         height: auto;
         min-height: 100vh;
-        padding: 85px 15px 45px;
-        box-sizing: border-box;
+        padding: 80px 8px 30px !important; /* Padding lateral mínimo para hacer las cajas más anchas */
+        box-sizing: border-box !important;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -642,9 +642,9 @@ body {
        ============================== */
 
     .contenido-seccion {
-        width: 100%;
-        max-width: 100%;
-        gap: 25px;
+        width: 100% !important;
+        max-width: 100% !important;
+        gap: 20px;
     }
 
     #texto {
@@ -655,17 +655,17 @@ body {
 
     #texto h1,
     #texto h2 {
-        font-size: clamp(30px, 8vw, 44px);
-        line-height: 1.05;
-        letter-spacing: 1px;
-        margin-bottom: 18px;
+        font-size: clamp(28px, 8vw, 40px);
+        line-height: 1.1;
+        letter-spacing: 0.5px;
+        margin-bottom: 14px;
     }
 
     #texto p {
         width: 100%;
-        max-width: 600px;
-        font-size: clamp(13px, 3.5vw, 16px);
-        line-height: 1.55;
+        max-width: 100%;
+        font-size: clamp(13px, 3.5vw, 15px);
+        line-height: 1.5;
         margin: auto;
     }
 
@@ -675,10 +675,10 @@ body {
        ============================== */
 
     .contenedor-tarjetas {
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 12px;
+        width: 100% !important;
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 10px;
     }
 
     .contenedor-tarjetas a {
@@ -688,29 +688,30 @@ body {
 
     .tarjeta-info {
         width: 100%;
-        height: 235px;
-        padding: 10px;
+        height: auto;
+        min-height: 220px;
+        padding: 8px;
         box-sizing: border-box;
         overflow: hidden;
     }
 
     .tarjeta-info img {
         width: 100%;
-        height: 100px;
+        height: 90px;
         object-fit: cover;
-        margin-bottom: 10px;
+        margin-bottom: 8px;
     }
 
     .tarjeta-info h3 {
-        font-size: 13px;
+        font-size: 12px;
         line-height: 1.2;
-        letter-spacing: 1px;
-        margin-bottom: 8px;
+        letter-spacing: 0.5px;
+        margin-bottom: 6px;
     }
 
     .tarjeta-info p {
         font-size: 11px;
-        line-height: 1.4;
+        line-height: 1.35;
     }
 
 
@@ -719,18 +720,19 @@ body {
        ============================== */
 
     .slider-anterior {
-        left: 7px;
+        left: 2px;
     }
 
     .slider-siguiente {
-        right: 7px;
+        right: 2px;
     }
 
     .slider-anterior,
     .slider-siguiente {
-        width: 40px;
-        height: 45px;
-        font-size: 23px;
+        width: 36px;
+        height: 42px;
+        font-size: 20px;
+        z-index: 10;
     }
 
 
@@ -739,7 +741,7 @@ body {
        ============================== */
 
     .slider-indicadores {
-        bottom: 15px;
+        bottom: 10px;
     }
 
 
@@ -748,174 +750,111 @@ body {
        ============================== */
 
     .seccion-abajo {
-        width: 100%;
-        padding: 60px 15px;
-        box-sizing: border-box;
+        width: 100% !important;
+        padding: 40px 8px !important; /* Más ancho aprovechable en pantalla */
+        box-sizing: border-box !important;
     }
 
     .contenido-abajo {
-        width: 100%;
-        max-width: 100%;
+        width: 100% !important;
+        max-width: 100% !important;
     }
 
     .titulo-ia {
-        font-size: clamp(32px, 9vw, 50px);
-        line-height: 1.05;
+        font-size: clamp(28px, 8vw, 42px);
+        line-height: 1.1;
         text-align: center;
     }
 
     .contenedor-cajas-nuevas {
-        width: 100%;
+        width: 100% !important;
         gap: 12px;
     }
 
 
     /* ==============================
-       CAJAS DE SOFTWARE
-       SOLO SE MODIFICÓ ESTO
-       ============================== */
-
-    .fila-3 {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 12px;
-    }
-
-    .fila-2 {
-        display: flex;
-        justify-content: center;
-        gap: 12px;
-    }
-
-    .fila-2 .caja-opaca {
-        width: calc(50% - 6px);
-    }
-
-    .fila-1 {
-        display: flex;
-        justify-content: center;
-    }
-
-    .fila-1 .caja-opaca {
-        width: 100%;
-        max-width: 500px;
-    }
-
-
-    /* ==============================
-       CAJAS DE INTELIGENCIA
-       SOLO SE MODIFICÓ ESTO
-       ============================== */
-
-    .fila-cuatro {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 12px;
-    }
-
-    .caja-opaca {
-        width: 100%;
-        box-sizing: border-box;
-    }
-}
-
-
-/* =========================================
-   CELULARES PEQUEÑOS
-   ========================================= */
-
-@media (max-width: 480px) {
-
-    #menu a {
-        padding: 21px 5px;
-        font-size: 10px;
-    }
-
-    .pantalla {
-        padding: 80px 10px 40px;
-    }
-
-    #texto h1,
-    #texto h2 {
-        font-size: clamp(28px, 8.5vw, 38px);
-    }
-
-    #texto p {
-        font-size: 12px;
-    }
-
-    .contenedor-tarjetas {
-        gap: 10px;
-    }
-
-    .tarjeta-info {
-        height: 220px;
-        padding: 8px;
-    }
-
-    .tarjeta-info img {
-        height: 90px;
-    }
-
-    .tarjeta-info h3 {
-        font-size: 12px;
-    }
-
-    .tarjeta-info p {
-        font-size: 10px;
-    }
-
-    .slider-anterior,
-    .slider-siguiente {
-        width: 35px;
-        height: 42px;
-    }
-
-
-/* ==============================
-       CAJAS DE SOFTWARE (FORZADO)
+       CAJAS DE SOFTWARE (MÁS ANCHAS)
        ============================== */
 
     .fila-3,
     .fila-2,
     .fila-1 {
-        display: grid !important;
-        grid-template-columns: 1fr !important;
-        gap: 16px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
         width: 100% !important;
+        gap: 12px !important;
     }
 
     .fila-2 .caja-opaca,
-    .fila-1 .caja-opaca {
+    .fila-1 .caja-opaca,
+    .fila-3 .caja-opaca {
         width: 100% !important;
         max-width: 100% !important;
     }
 
 
     /* ==============================
-       CAJAS DE INTELIGENCIA (FORZADO)
+       CAJAS DE INTELIGENCIA (MÁS ANCHAS)
        ============================== */
 
     .fila-cuatro {
-        display: grid !important;
-        grid-template-columns: 1fr !important;
-        gap: 16px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
         width: 100% !important;
+        gap: 12px !important;
     }
 
     .caja-opaca {
         width: 100% !important;
         box-sizing: border-box !important;
-        padding: 20px 15px !important;
+        padding: 16px 12px !important; /* Padding reducido a los lados para dar más espacio horizontal al texto */
         text-align: center !important;
+        word-wrap: break-word;
+        hyphens: auto;
     }
 
-    /* ==============================
-       SOLO CAJAS DE INTELIGENCIA
-       ============================== */
+    .caja-opaca h2,
+    .caja-opaca h3 {
+        font-size: clamp(18px, 5vw, 22px) !important;
+        margin-bottom: 8px !important;
+        word-break: break-word;
+    }
 
-    .fila-cuatro {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 10px;
+    .caja-opaca p {
+        font-size: 13px !important;
+        line-height: 1.45 !important;
+        margin: 0 auto !important;
+        width: 100% !important;
+    }
+}
+
+
+/* =========================================
+   CELULARES PEQUEÑOS (HASTA 480px)
+   ========================================= */
+
+@media (max-width: 480px) {
+
+    #menu a {
+        padding: 20px 4px;
+        font-size: 9.5px;
+    }
+
+    .pantalla {
+        padding: 75px 5px 25px !important;
+    }
+
+    .seccion-abajo {
+        padding: 30px 5px !important;
+    }
+
+    .caja-opaca {
+        padding: 14px 10px !important;
+    }
+
+    .caja-opaca p {
+        font-size: 12.5px !important;
     }
 }
